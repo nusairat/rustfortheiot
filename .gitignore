@@ -1,0 +1,38 @@
+# Misc files
+code/ch11/server_name
+
+**/*.rs.bk
+**/.DS_Store
+**/target/**
+**/.idea/**
+**/*.iml
+**/.vscode
+**/*.code-workspace
+
+#Certs
+certs/
+
+data/
+
+# Generated files
+*.docx
+*.pdf
+
+# To Put some misc items
+misc/**
+temp/**
+test/**
+=======
+**/target
+target/**
+.vscode/
+*.code-workspace
+*.iml
+
+# This gets compiled when creating a book
+# dont check it in
+chapters/book.html
+*.docx
+
+# Coded items
+tokenstorage.json
