@@ -4,6 +4,12 @@
 Handles upload and downloading of files
 Make sure the directory :: `~/rust-iot/temp` exists
 
+## Build & Run
+cargo build --features "full"
+
+cargo run --features "full"
+
+* Note docker will be building full, you can change it to do a different version.
 ## Ports
 
 HTTP: 3001
@@ -27,11 +33,6 @@ curl \
   -F "image=@test/note.txt" \
   localhost:3001/upload
   
-  
-## Run
-cargo build --features "full"
-
-cargo run --features "full"
 
 ### Example Queries
 http -f POST localhost:3001/api/upload/46320EEA-9D7A-4E10-895C-8264ED780792 file@~/Downloads/videos/image-13.05.2020_05.09.47.jpg

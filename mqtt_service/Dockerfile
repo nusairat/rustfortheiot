@@ -1,6 +1,8 @@
 ## MUSL with OpenSSL
 # <1>
-FROM ekidd/rust-musl-builder:1.34.2-openssl11 as build
+# FROM ekidd/rust-musl-builder:1.34.2-openssl11 as build
+# latest version :: 1.42.0-openssl11
+FROM ekidd/rust-musl-builder:1.48.0 as build
 
 # Fix permissions on source code.
 # Also on where we are installing CAPNP

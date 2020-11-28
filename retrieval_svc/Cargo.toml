@@ -6,6 +6,8 @@ edition = "2018"
 build = "build.rs"
 
 [features]
+default = ["full"]
+
 chapter5 = ["cqrs","ch05"]
 full = ["cqrs","auth"]
 # GraphQL with database interactions
@@ -16,7 +18,6 @@ auth = []
 ch04 = []
 ch05 = ["cqrs"]
 ch06 = []
-#default = ["full"]
 
 [build-dependencies]
 capnpc = "0.12.1"
@@ -53,26 +54,27 @@ params = "0.8.0"
 # end::params[]
 
 ## For the iron parser to parse the object to a struct
-serde = "1.0.105"
-serde_json = "1.0.50"
-serde_derive = "1.0.105"
+serde = "1.0.117"
+serde_json = "1.0.59"
+serde_derive = "1.0.117"
 
 # tag::log[]
-log = "0.4.8"
+log = "0.4.11"
 pretty_env_logger = "0.4.0"
-env_logger = "0.7.1"
+env_logger = "0.8.2"
 # end::log[]
 
 # Time for the data
 #chrono = "0.4.6"
-chrono = { version = "0.4.11", features = ["serde"] }
+chrono = { version = "0.4.19", features = ["serde"] }
 
 # Diesel  - database access
 # tag::diesel[]
 # Enable Number, this allows us to use big decimal tat we can use in the place fo f64
 # serde_json = needed for using JSONb
+# In 1.4.5 they changed uuidv07 to use uuid
 # uuidv07 : needed for higher uuid versions (in the master this was changed to just uuid)
-diesel = { version = "^1.4.4", features = ["postgres", "r2d2", "chrono", "uuidv07", "numeric", "serde_json"] }
+diesel = { version = "1.4.5", features = ["postgres", "r2d2", "chrono", "uuidv07", "numeric", "serde_json"] }
 dotenv = "0.15.0"
 # end::diesel[]
 
@@ -90,7 +92,7 @@ r2d2_postgres = "0.16.0"
 
 # For using enums with diesel
 # tag::diesel_enum[]
-diesel-derive-enum = { version = "0.4", features = ["postgres"] }
+diesel-derive-enum = { version = "1.1.0", features = ["postgres"] }
 # end::diesel_enum[]
 
 # Uuid creation
@@ -100,11 +102,11 @@ uuid = { version =  "^0.8.0", features = ["serde", "v4"] }
 
 # tag::clap[]
 # Used for Argument Matching And Applications
-clap = "2.33.0"
+clap = "2.33.3"
 # end::clap[]
 
 # For error chaining
-error-chain = "0.12.2"
+error-chain = "0.12.4"
 
 # Extra dependencies not in crate
 #[dependencies.bodyparser]
@@ -114,19 +116,20 @@ error-chain = "0.12.2"
 capnp = "0.12.1"
 
 # For the Derive foer the Enumerations
-enum-primitive-derive = "0.1.2"
-num-traits = "0.2.11"
+enum-primitive-derive = "0.2.1"
+num-traits = "0.2.14"
 
 # Canpn RC
 capnp-rpc = "0.12.1"
 # tag::tokio[]
-tokio = { version = "0.2.17", features = [ "full" ] }
-futures = "0.3"
-async-std = "1.5"
+# tokio = { version = "0.2.17", features = [ "full" ] }
+tokio = { version = "0.3.4", features = [ "full" ] }
+futures = "0.3.8"
+async-std = "1.7.0"
 # end::tokio[]
 
 # Needed to build the MUSLRust
-openssl = "0.10.28"
+openssl = "0.10.30"
 
 # tag::dieselm[]
 # Needed to run diesel migrations
@@ -138,9 +141,9 @@ diesel_migrations = "1.4.0"
 ## Just using this for the Authorization<Beaer> so dont need to update it.
 ### Right now code wise are keeping this low
 # tag::alcoholic[]
-hyper = "0.10.16"
+hyper = "0.10.6"
 alcoholic_jwt = "1.0.0"
-reqwest = "0.10.4"
+reqwest = "0.10.9"
 http = "0.2.1"
 # end::alcoholic[]
 

@@ -1,15 +1,15 @@
 # MQTT Service
 
+## Running 
+cargo run --features "full" -- --http_server 0.0.0.0
+- runs full (although default feature is full)
+
 - Monitors heartbeat
 - Sends on Recording to the MQTT
 
 ## Ports
 HTTP: 3005
 MQTT: 1883 (nonssl) 8883 (ssl)
-
-## Running 
-
-cargo run --features "full" -- --http_server 0.0.0.0
 
 # Topics Subscribed To
 
