@@ -1,11 +1,12 @@
 # MQTT Service
+Monitors heartbeat and sends updates to record from the backend ot the Pi.
 
-## Running 
-cargo run --features "full" -- --http_server 0.0.0.0
+## Building & Running 
+`docker build .`
+- can build a docker image for the application
+
+`cargo run --features "full" -- --http_server 0.0.0.0`
 - runs full (although default feature is full)
-
-- Monitors heartbeat
-- Sends on Recording to the MQTT
 
 ## Ports
 HTTP: 3005

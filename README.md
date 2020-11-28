@@ -17,14 +17,14 @@ Because we build up the code throughout the book, I didn't want to deploy a new 
 The following are the different code blocks.
 
 ### Backend Microservices
-- [MQ Service Handler](mqtt_service/README.md)
-- [Retrieval Service](retrieval_svc/README.md)
-- [Upload Service](upload_svc/README.md)
+- [MQ Service Handler](mqtt_service/)
+- [Retrieval Service](retrieval_svc/)
+- [Upload Service](upload_svc/)
 
 ### Raspberry Pi Service
-- [Auth Library](rasp-auth/README.md)
-- [Raspberry Pi Main Application](rasp-pi-app-master/README.md)
-- [Raspberry Pi MQ Handler](rasp-pi-mq/README.md)
+- [Auth Library](rasp-auth/)
+- [Raspberry Pi Main Application](rasp-pi-app-master/)
+- [Raspberry Pi MQ Handler](rasp-pi-mq/)
 
 ## TODO
 
