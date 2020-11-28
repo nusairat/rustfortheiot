@@ -6,8 +6,13 @@ Make sure the directory :: `~/rust-iot/temp` exists
 
 ## Build & Run
 `cargo build --features "full"`
+- Builds the app locally
+
 `cargo run --features "full"`
+- Runs the app
+
 `docker build .`
+- build for deploying
 
 * Note docker will be building full, you can change it to do a different version.
 
