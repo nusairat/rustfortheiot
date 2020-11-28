@@ -7,6 +7,7 @@ edition = "2018"
 build = "build.rs"  # <1>
 
 [features]
+default = ["full"]
 full = []
 ch04 = []
 
@@ -16,7 +17,7 @@ capnpc = "0.9.3"    # <2>
 
 [dependencies]
 # Used for Argument Matching And Applications
-clap = "2.32.0"
+clap = "2.32.3"
 
 # To find relative directory
 shellexpand = "1.1.1"
@@ -33,8 +34,8 @@ iron = "0.6.*"
 mount = "0.4.0"
 router = "0.6.0"
 
-log = "0.4.5"
-pretty_env_logger = "0.3"
+log = "0.4.11"
+pretty_env_logger = "0.4.0"
 
 regex = "1"
 lazy_static = "1.2.0"

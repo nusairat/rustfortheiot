@@ -1,5 +1,5 @@
 #FROM rust:1.34.0 as build
-FROM ekidd/rust-musl-builder:1.34.2 as build
+FROM ekidd/rust-musl-builder:1.48.0 as build
 
 COPY ./ ./
 
