@@ -204,7 +204,7 @@ fn handle_video(mut face: CascadeClassifier, show_window: bool,
 
         // Sleeps in case there is no screen coming
         if frame.empty().unwrap() {
-            debug!("frame empty? camera not iontialized?");
+            debug!("frame empty? camera not initialized?");
             thread::sleep(Duration::from_secs(50));
             continue;
         }
