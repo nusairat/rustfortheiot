@@ -32,7 +32,7 @@ const INTERVAL_IN_SECONDS: u64 = 60 * 60;
         loop {            
             interval.tick().await;      // <7>
             info!("Fire the Timer Checker; ");
-            display_special(&mut tx);   // <8>
+            display_special(&mut tx).await;   // <8>
         }
     });    
  }
